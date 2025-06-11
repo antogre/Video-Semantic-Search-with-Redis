@@ -1,0 +1,88 @@
+# File .gitignore per il progetto di Ricerca Semantica Video
+
+# -------------------------------------------------------------------
+# File e cartelle sensibili - DA NON CARICARE MAI SU GITHUB
+# -------------------------------------------------------------------
+# Questo file contiene le chiavi private per accedere ai servizi Google.
+# Se lo carichi su un repository pubblico, chiunque potrà accedere ai tuoi servizi.
+container1-backend/service_account.json
+
+
+# -------------------------------------------------------------------
+# Dipendenze e Cache del Backend (Python)
+# -------------------------------------------------------------------
+
+# Cartella della cache di Python
+__pycache__/
+
+# File Python compilati
+*.pyc
+
+# Cartelle di ambienti virtuali
+.env
+.venv
+env/
+venv/
+ENV/
+VENV/
+
+# Cartella per i video caricati (temporanei)
+container1-backend/uploads/
+
+# Cache della libreria Towhee (può contenere modelli pesanti)
+.towhee/
+
+
+# -------------------------------------------------------------------
+# Dipendenze e Artefatti del Frontend (Node.js / React)
+# -------------------------------------------------------------------
+
+# La cartella delle dipendenze di Node.js (può essere enorme)
+container1-frontend/node_modules/
+
+# La cartella di build di produzione
+container1-frontend/build/
+
+# File di log
+container1-frontend/npm-debug.log*
+container1-frontend/yarn-debug.log*
+container1-frontend/yarn-error.log*
+
+# File di ambiente locale (spesso contengono chiavi API)
+container1-frontend/.env.local
+container1-frontend/.env.development.local
+container1-frontend/.env.test.local
+container1-frontend/.env.production.local
+
+
+# -------------------------------------------------------------------
+# File di sistema operativo
+# -------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+
+
+# -------------------------------------------------------------------
+# File di configurazione di IDE (Editor di Codice)
+# -------------------------------------------------------------------
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+
+node_modules

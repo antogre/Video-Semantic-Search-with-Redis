@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #1f1f1f;
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.upload-button, .batch-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  min-width: 150px;
+  gap: 8px;
+}
+
+.upload-button.disabled, .batch-button.disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.batch-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border: 1px solid #444;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.batch-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.batch-input-group label {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  color: #aaa;
+}
+
+.batch-input-group input {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  width: 80px;
+}
+
+.results-container {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.loading-placeholder {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 15px; 
+  color: #aaa;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.video-item {
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.video-placeholder {
+  height: 120px;
+  background-color: #383838;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.video-name {
+  font-weight: bold;
+  font-size: 0.8rem;
+  word-wrap: break-word;
+  margin-top: 5px;
+}
+
+.video-similarity, .video-backend-url {
+  font-size: 0.7rem;
+  color: #aaa;
+  margin-top: 4px;
+}
+.video-backend-url a {
+  color: #6caddf;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 500px;
+  padding: 10px 45px 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.search-icon {
+  position: absolute;
+  right: calc(20% + 15px);
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.2s;
+}
+
+.search-icon:hover {
+  color: #fff;
+}
+
+.footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #333;
+  font-size: 0.8rem;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.status-pill.ok { background-color: #28a745; color: white; }
+.status-pill.error { background-color: #dc3545; color: white; }
+
+.search-timings {
+  text-align: center;
+  padding-bottom: 15px;
+  flex-shrink: 0;
+}
+.timing-pill {
+  background-color: #444;
+  color: #eee;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.spinner { animation: spin 1s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.db-message {
+    text-align: center;
+    color: #aaa;
+    margin-top: 40px;
+}

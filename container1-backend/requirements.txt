@@ -1,0 +1,13 @@
+flask
+flask-cors
+celery
+redis==5.0.4
+requests
+numpy
+towhee
+google-auth
+av
+Pillow
+
+# torch, torchvision, e torchaudio sono installati
+# tramite un comando separato nel Dockerfile.
