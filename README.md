@@ -1,6 +1,6 @@
 # Ricerca Semantica di Video con CLIP e Redis
 
-Questo progetto implementa un sistema avanzato per la ricerca di video basata sul loro contenuto semantico. Utilizza il modello di intelligenza artificiale CLIP per generare embedding (rappresentazioni numeriche) sia per i video che per le query testuali. Questi embedding vengono memorizzati e indicizzati in un database vettoriale Redis, permettendo ricerche per similarità estremamente rapide ed efficaci.
+Questo progetto implementa un sistema avanzato per la ricerca di video basata sul loro contenuto semantico. Utilizza il modello di intelligenza artificiale CLIP4CLIP per generare embedding sia per i video che per le query testuali. Questi embedding vengono memorizzati e indicizzati in un database vettoriale Redis, permettendo ricerche per similarità estremamente rapide ed efficaci.
 
 L'utente può cercare un video descrivendo a parole cosa contiene (es. "un cane che gioca sulla spiaggia") e il sistema restituirà i video più pertinenti.
 
@@ -10,7 +10,7 @@ L'utente può cercare un video descrivendo a parole cosa contiene (es. "un cane 
 
 Il sistema è basato su microservizi e containerizzato con Docker. I componenti principali sono:
 
-* **Frontend**: Un'interfaccia utente moderna e reattiva costruita con **React**, che permette di caricare video, avviare l'indicizzazione e visualizzare i risultati di ricerca.
+* **Frontend**: Un'interfaccia utente Costruita con **React**, che permette di caricare video, avviare l'indicizzazione e visualizzare i risultati di ricerca.
 * **Backend API**: Un'API REST sviluppata con **Flask** che gestisce le richieste HTTP, l'upload dei file e l'interazione con il sistema di task.
 * **Worker Asincrono**: Un worker **Celery** che gestisce le operazioni lunghe e computazionalmente intensive come il download e l'estrazione degli embedding dei video in background, senza bloccare l'interfaccia utente.
 * **Database & Broker**: Un singolo container **Redis Stack** che funge da:
@@ -42,9 +42,9 @@ Questo progetto utilizza un'API esterna che richiede autenticazione tramite un S
 
 Il modello di intelligenza artificiale caricato dal worker (`celery-worker`) richiede una quantità significativa di RAM. È fondamentale aumentare la memoria allocata a Docker Desktop per evitare che il container del worker venga terminato dal sistema.
 
-1.  Apri le **Impostazioni (Settings)** di Docker Desktop.
-2.  Vai alla sezione **Risorse (Resources)**.
-3.  Aumenta lo slider della **Memoria (Memory)** ad almeno **4 GB** (consigliato 6-8 GB se disponibili).
+1.  Apri le **Impostazioni** di Docker Desktop.
+2.  Vai alla sezione **Risorse**.
+3.  Aumenta lo slider della **Memoria** ad almeno **4 GB** (consigliato 6-8 GB se disponibili).
 4.  Clicca su **"Apply & Restart"**.
 
 ---
