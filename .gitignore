@@ -1,10 +1,8 @@
-# File .gitignore per il progetto di Ricerca Semantica Video
 
 # -------------------------------------------------------------------
 # File e cartelle sensibili - DA NON CARICARE MAI SU GITHUB
 # -------------------------------------------------------------------
 # Questo file contiene le chiavi private per accedere ai servizi Google.
-# Se lo carichi su un repository pubblico, chiunque potrà accedere ai tuoi servizi.
 container1-backend/service_account.json
 
 
